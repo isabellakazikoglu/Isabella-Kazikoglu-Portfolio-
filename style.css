@@ -5,38 +5,7 @@
 * {
     box-sizing: border-box;
 }
-/* Navigation buttons */
 
-.nav-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 16px;
-}
-
-.nav-links a {
-    background-color: #f4f0f7;
-    border: 1px solid #d8cce1;
-    border-radius: 6px;
-    color: #4f3275;
-    font-size: 0.92rem;
-    font-weight: 600;
-    padding: 8px 15px;
-    text-decoration: none;
-}
-
-.nav-links a:hover {
-    background-color: #5e3a7d;
-    border-color: #5e3a7d;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.nav-links a.active {
-    background-color: #5e3a7d;
-    border-color: #5e3a7d;
-    color: #ffffff;
-}
 html {
     scroll-behavior: smooth;
 }
@@ -101,17 +70,35 @@ header {
 .nav-links {
     display: flex;
     flex-wrap: wrap;
-    gap: 24px;
+    gap: 10px;
 }
 
 .nav-links a {
-    color: #333333;
-    font-size: 0.95rem;
-    font-weight: 500;
+    background-color: #f4f0f7;
+    border: 1px solid #d8cce1;
+    border-radius: 6px;
+    color: #4f3275;
+    font-size: 0.92rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
 }
 
 .nav-links a:hover {
-    color: #5e3a7d;
+    background-color: #5e3a7d;
+    border-color: #5e3a7d;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    background-color: #5e3a7d;
+    border-color: #5e3a7d;
+    color: #ffffff;
 }
 
 
@@ -122,6 +109,7 @@ header {
 main {
     margin: 0 auto;
     max-width: 1000px;
+    min-height: 65vh;
     padding: 55px 24px 80px;
 }
 
@@ -236,7 +224,7 @@ p {
 
 
 /* ------------------------------
-   Project detail pages
+   Individual project pages
 ------------------------------ */
 
 .project-page {
@@ -306,7 +294,63 @@ p {
 
 
 /* ------------------------------
-   Resume and contact pages
+   Contact page
+------------------------------ */
+
+.contact-section {
+    max-width: 760px;
+}
+
+.contact-introduction {
+    color: #4d4d4d;
+    font-size: 1.05rem;
+    margin-bottom: 35px;
+    max-width: 700px;
+}
+
+.contact-cards {
+    display: grid;
+    gap: 16px;
+}
+
+.contact-card {
+    background-color: #ffffff;
+    border: 1px solid #d8cce1;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 22px;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.contact-card:hover {
+    border-color: #68458c;
+    box-shadow: 0 8px 20px rgba(66, 40, 90, 0.08);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+.contact-label {
+    color: #68458c;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.contact-value {
+    color: #333333;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+/* ------------------------------
+   Resume page
 ------------------------------ */
 
 .resume-frame {
@@ -314,17 +358,6 @@ p {
     height: 800px;
     margin-top: 25px;
     width: 100%;
-}
-
-.contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 25px;
-}
-
-.contact-links a {
-    font-weight: 600;
 }
 
 
@@ -347,6 +380,7 @@ footer {
 ------------------------------ */
 
 @media (max-width: 700px) {
+
     .navbar {
         padding-top: 24px;
     }
@@ -356,7 +390,11 @@ footer {
     }
 
     .nav-links {
-        gap: 12px 20px;
+        gap: 10px;
+    }
+
+    .nav-links a {
+        padding: 7px 13px;
     }
 
     main {
@@ -380,4 +418,5 @@ footer {
     .resume-frame {
         height: 600px;
     }
+
 }
