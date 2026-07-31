@@ -418,5 +418,110 @@ footer {
     .resume-frame {
         height: 600px;
     }
+/* ------------------------------
+   Kimberly-Clark project page
+------------------------------ */
 
+.project-hero {
+    border-bottom: 1px solid #dddddd;
+    padding-bottom: 42px;
+}
+
+.project-summary {
+    color: #4d4d4d;
+    font-size: 1.08rem;
+    max-width: 760px;
+}
+
+.project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list span {
+    background-color: #f4f0f7;
+    border: 1px solid #d8cce1;
+    border-radius: 5px;
+    color: #4f3275;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 7px 12px;
+}
+
+.analysis-grid {
+    display: grid;
+    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.analysis-card {
+    background-color: #faf9fb;
+    border: 1px solid #ded8e3;
+    border-radius: 7px;
+    padding: 22px;
+}
+
+.analysis-card h3 {
+    margin-bottom: 9px;
+}
+
+.analysis-card p {
+    margin-bottom: 0;
+}
+
+.finding {
+    border-left: 4px solid #68458c;
+    margin-bottom: 22px;
+    padding: 4px 0 4px 20px;
+}
+
+.finding h3 {
+    margin-bottom: 7px;
+}
+
+.finding p {
+    margin-bottom: 0;
+}
+
+.project-list {
+    padding-left: 22px;
+}
+
+.project-list li {
+    margin-bottom: 10px;
+}
+
+.project-download-section {
+    background-color: #faf9fb;
+    border: 1px solid #ded8e3 !important;
+    border-radius: 7px;
+    margin-top: 35px;
+    padding: 28px !important;
+}
+
+@media (max-width: 700px) {
+
+    .analysis-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-buttons {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .project-buttons .button {
+        margin-right: 0;
+        text-align: center;
+    }
+
+}
 }
