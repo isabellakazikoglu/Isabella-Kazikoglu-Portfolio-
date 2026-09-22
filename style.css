@@ -640,9 +640,19 @@ a:focus-visible { outline: 3px solid #cc0033; outline-offset: 5px; }
 
 /* Professional portfolio introduction */
 .home-hero {
-    display: block;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 280px;
+    align-items: center;
+    gap: 64px;
     min-height: 0;
-    padding: 76px 28px 72px;
+    padding: 60px 28px;
+}
+.hero-portrait img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 3px;
 }
 .home-hero h1 {
     font-size: clamp(2.65rem, 5.5vw, 4.8rem);
@@ -678,7 +688,12 @@ a:focus-visible { outline: 3px solid #cc0033; outline-offset: 5px; }
     letter-spacing: -.035em;
 }
 @media (max-width: 760px) {
-    .home-hero { padding: 44px 20px 48px; }
+    .home-hero {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding: 36px 20px 48px;
+    }
+    .hero-portrait { grid-row: 1; width: 160px; }
     .home-hero h1 { font-size: clamp(2.5rem, 9vw, 3.5rem); }
     .hero-role { font-size: 1.08rem; }
     .home-about { padding: 36px 20px; gap: 18px; }
