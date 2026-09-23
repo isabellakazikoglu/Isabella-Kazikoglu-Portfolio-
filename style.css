@@ -654,12 +654,12 @@ a:focus-visible { outline: 3px solid #cc0033; outline-offset: 5px; }
     border: 0;
     border-radius: 0;
     -webkit-mask-image:
-        linear-gradient(to bottom, transparent, #000 8%, #000 76%, transparent),
-        linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+        linear-gradient(to bottom, #000 82%, transparent),
+        linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
     -webkit-mask-composite: source-in;
     mask-image:
-        linear-gradient(to bottom, transparent, #000 8%, #000 76%, transparent),
-        linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
+        linear-gradient(to bottom, #000 82%, transparent),
+        linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
     mask-composite: intersect;
 }
 .home-hero h1 {
