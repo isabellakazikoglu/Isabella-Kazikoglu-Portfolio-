@@ -651,15 +651,18 @@ a:focus-visible { outline: 3px solid #cc0033; outline-offset: 5px; }
     display: block;
     width: 100%;
     height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 25%;
     border: 0;
     border-radius: 0;
     -webkit-mask-image:
-        linear-gradient(to bottom, #000 82%, transparent),
-        linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+        linear-gradient(to bottom, transparent, #000 12%, #000 78%, transparent),
+        linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
     -webkit-mask-composite: source-in;
     mask-image:
-        linear-gradient(to bottom, #000 82%, transparent),
-        linear-gradient(to right, transparent, #000 5%, #000 95%, transparent);
+        linear-gradient(to bottom, transparent, #000 12%, #000 78%, transparent),
+        linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
     mask-composite: intersect;
 }
 .home-hero h1 {
